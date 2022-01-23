@@ -62,6 +62,7 @@
     </div>
     <script>
         
+        // login button event handler
         const loginBtn = document.getElementById("login");
         loginBtn.addEventListener("click", function(){
             const loginArea = document.getElementById("login-area");
@@ -70,28 +71,16 @@
             transactionArea.style.display = "block";
         })
 
-  
+        //deposit button event handler
         const depositBtn = document.getElementById("addDeposit");
         depositBtn.addEventListener("click", function(){
-            const depositAmount = document.getElementById("depositAmount").value;
-            const depostNumber = parseFloat(depositAmount);
+            const depositNumber = getInputNumber("depositAmount");        
 
-            
+            updateSpanText("currentDeposit", depositNumber);
+            updateSpanText("currentBalance", depositNumber);
 
-
-            const currentDeposit = document.getElementById("currentDeposit").innerText;
-
-            const currentDepositNumber = parseFloat(currentDeposit);
-            const totalDeposit = depostNumber + currentDepositNumber;
-            document.getElementById("currentDeposit").innerText = totalDeposit;
-
-            const currentBalance = document.getElementById("currentBalance").innerText;
-            const currentBalanceNumber = parseFloat("currentBalance");
-            const totalBalance = depostNumber + currentBalance;
-            document.getElementById("currentBalance").innerText = totalBalance;
-
-            
-            document.getElementById("depositAmount").value = "";    
+            document.getElementById("depositAmount").value = "";
+        })
 
            
 
