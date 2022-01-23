@@ -37,7 +37,7 @@
             <div class="col-md-4">
                 <div class="balance status">
                     <h5>Balance</h5>
-                    <h2>$ <span id="currentBalance">200</span></h2>
+                    <h2>$ <span id="currentBalance">1240</span></h2>
                 </div>
             </div>
         </div>
@@ -61,8 +61,7 @@
         </div>
     </div>
     <script>
-        
-        /// login button event handler
+        // login button event handler
         const loginBtn = document.getElementById("login");
         loginBtn.addEventListener("click", function(){
             const loginArea = document.getElementById("login-area");
@@ -92,6 +91,7 @@
 
             document.getElementById("withdrawAmount").value = ""
         })
+
         function getInputNumber(id){
             const amount = document.getElementById(id).value;
             const amountNumber = parseFloat(amount);
@@ -104,8 +104,6 @@
             const totalAmount = addedNumber + currentNumber;
             document.getElementById(id).innerText = totalAmount;
         }
-
-        
     </script>
 </body>
 </html>
